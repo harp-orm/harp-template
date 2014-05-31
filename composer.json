@@ -1,0 +1,13 @@
+{
+    "name": "harp-orm/harp-template",
+    "description": "Compoer Init Template for Harp Packages",
+    "license": "BSD-3-Clause",
+    "type": "composer-init-template",
+    "authors": [
+        {
+            "name": "Ivan Kerin",
+            "email": "ikerin@gmail.com",
+            "role": "Author"
+        }
+    ]
+}
