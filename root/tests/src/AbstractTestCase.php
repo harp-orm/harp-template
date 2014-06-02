@@ -32,7 +32,7 @@ abstract class AbstractTestCase extends PHPUnit_Framework_TestCase {
         $this->logger = new TestLogger();
 
         DB::setConfig('default', array(
-            'dsn' => 'mysql:dbname=test-{%repository_name%};host=127.0.0.1',
+            'dsn' => 'mysql:dbname={%repository_name%};host=127.0.0.1',
             'username' => 'root',
         ));
 
