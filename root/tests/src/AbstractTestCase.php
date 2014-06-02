@@ -4,6 +4,7 @@ namespace {%php_namespace%}\Test;
 
 use Harp\Query\DB;
 use PHPUnit_Framework_TestCase;
+use {%php_namespace%}\Test\Repo;
 
 /**
  * @author    {%author_name%} <{%author_email%}>
@@ -38,6 +39,8 @@ abstract class AbstractTestCase extends PHPUnit_Framework_TestCase {
 
         DB::get()->setLogger($this->logger);
         DB::get()->beginTransaction();
+
+        Repo\Test::get()->clear();
     }
 
     public function tearDown()
