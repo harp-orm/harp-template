@@ -12,18 +12,12 @@ use {%php_namespace%}\Test\Model;
  */
 class Test extends AbstractRepo
 {
-    private static $instance;
-
     /**
      * @return Test
      */
-    public static function get()
+    public static function newInstance()
     {
-        if (self::$instance === null) {
-            self::$instance = new Test('{%php_namespace%}\Test\Model\Test');
-        }
-
-        return self::$instance;
+        return new Test('{%php_namespace%}\Test\Model\Test');
     }
 
     public function initialize()
