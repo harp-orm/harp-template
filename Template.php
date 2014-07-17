@@ -18,6 +18,7 @@ class Template
             new Prompt\AuthorEmail(),
             new Prompt\Copyright(),
             new Prompt\Bugs(),
+            new Prompt\SlackNotification(),
         ]);
     }
 }

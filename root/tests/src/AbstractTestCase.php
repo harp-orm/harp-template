@@ -3,6 +3,7 @@
 namespace {%php_namespace%}\Test;
 
 use Harp\Query\DB;
+use Harp\Harp\Repo\Contianer;
 use PHPUnit_Framework_TestCase;
 use {%php_namespace%}\Test\Repo;
 
@@ -11,8 +12,8 @@ use {%php_namespace%}\Test\Repo;
  * @copyright {%copyright%}
  * @license   http://spdx.org/licenses/BSD-3-Clause
  */
-abstract class AbstractTestCase extends PHPUnit_Framework_TestCase {
-
+abstract class AbstractTestCase extends PHPUnit_Framework_TestCase
+{
     /**
      * @var TestLogger
      */
@@ -40,7 +41,7 @@ abstract class AbstractTestCase extends PHPUnit_Framework_TestCase {
         DB::get()->setLogger($this->logger);
         DB::get()->beginTransaction();
 
-        Repo\Test::get()->clear();
+        Contianer::clear();
     }
 
     public function tearDown()
