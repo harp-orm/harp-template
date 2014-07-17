@@ -3,21 +3,17 @@
 namespace {%php_namespace%}\Test\Model;
 
 use Harp\Harp\AbstractModel;
-use {%php_namespace%}\Test\Repo;
 
 /**
  * @author    {%author_name%} <{%author_email%}>
  * @copyright {%copyright%}
  * @license   http://spdx.org/licenses/BSD-3-Clause
  */
-class Test extends AbstractModel
+class TestModel extends AbstractModel
 {
-    /**
-     * @return Repo\Test
-     */
-    public function getRepo()
+    public static function initialize($config)
     {
-        return Repo\Test::get();
+        $config;
     }
 
     public $id;
